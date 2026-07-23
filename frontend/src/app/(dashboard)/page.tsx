@@ -68,25 +68,25 @@ export default function DashboardPage() {
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {KPI_CARDS.map(({ key, label, icon: Icon, gradient, suffix }) => (
-          <Card key={key} className="overflow-hidden border-border/50 bg-card/80 backdrop-blur-sm transition-all hover:shadow-lg hover:shadow-primary/5">
+          <Card key={key} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow duration-200">
             <CardContent className="p-5">
-              <div className="flex items-center justify-between">
-                <div className="space-y-1">
-                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{label}</p>
+              <div className="flex items-start justify-between">
+                <div className="space-y-1.5">
+                  <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">{label}</p>
                   {error ? (
                     <div className="flex items-center gap-1 text-destructive">
                       <AlertCircle className="size-3" />
                       <span className="text-xs">Erro</span>
                     </div>
                   ) : stats ? (
-                    <div className="text-2xl font-bold tracking-tight">{stats[key]}</div>
+                    <div className="text-[28px] font-bold tracking-tight text-foreground">{stats[key]}</div>
                   ) : (
-                    <Skeleton className="h-7 w-12 shimmer" />
+                    <Skeleton className="h-8 w-16 shimmer" />
                   )}
-                  <p className="text-[11px] text-muted-foreground">{suffix}</p>
+                  <p className="text-[12px] text-muted-foreground font-medium">{suffix}</p>
                 </div>
-                <div className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${gradient}`}>
-                  <Icon className="size-5 text-white" />
+                <div className={`flex size-11 shrink-0 items-center justify-center rounded-2xl shadow-sm ${gradient}`}>
+                  <Icon className="size-[18px] text-white" />
                 </div>
               </div>
             </CardContent>
@@ -95,47 +95,42 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Visitantes recentes</CardTitle>
+        <Card className="border-0 shadow-sm">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base font-semibold">Visitantes recentes</CardTitle>
           </CardHeader>
           <CardContent>
             {error ? (
               <p className="text-sm text-muted-foreground">Erro ao carregar.</p>
             ) : stats ? (
               stats.recentVisitors.length > 0 ? (
-                <ul className="space-y-2">
+                <ul className="divide-y divide-border -mx-2">
                   {stats.recentVisitors.map((v) => (
-                    <li
-                      key={v.id}
-                      className="flex items-center justify-between rounded-md bg-muted/40 px-3 py-2 text-sm"
-                    >
-                      <span className="font-medium">{v.full_name}</span>
-                      <span className="text-xs text-muted-foreground">
+                    <li key={v.id} className="flex items-center justify-between px-2 py-2.5 text-sm">
+                      <span className="font-medium text-foreground">{v.full_name}</span>
+                      <span className="text-xs text-muted-foreground tabular-nums">
                         {new Date(v.visit_date).toLocaleDateString("pt-BR")}
                       </span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-sm text-muted-foreground">Nenhum visitante ainda.</p>
+                <p className="text-sm text-muted-foreground py-4 text-center">Nenhum visitante ainda.</p>
               )
             ) : (
               <div className="space-y-2">
-                {[1, 2, 3].map((i) => (
-                  <Skeleton key={i} className="h-9 w-full" />
-                ))}
+                {[1, 2, 3].map((i) => (<Skeleton key={i} className="h-9 w-full" />))}
               </div>
             )}
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Próximos aniversariantes</CardTitle>
+        <Card className="border-0 shadow-sm">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base font-semibold">Próximos aniversariantes</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground py-4 text-center">
               Em breve — conectando à API de membros.
             </p>
           </CardContent>
