@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #e4e4e7;
-  --card: #111118;
-  --card-foreground: #e4e4e7;
-  --popover: #111118;
-  --popover-foreground: #e4e4e7;
-  --primary: #6366f1;
-  --primary-foreground: #ffffff;
-  --secondary: #27272a;
-  --secondary-foreground: #e4e4e7;
-  --muted: #1c1c24;
-  --muted-foreground: #71717a;
-  --accent: #27272a;
-  --accent-foreground: #e4e4e7;
+  --background: #0b0820;
+  --foreground: #e8e4f0;
+  --card: #110d2c;
+  --card-foreground: #e8e4f0;
+  --popover: #110d2c;
+  --popover-foreground: #e8e4f0;
+  --primary: #c9a03c;
+  --primary-foreground: #0b0820;
+  --secondary: #1f1848;
+  --secondary-foreground: #d4c8f0;
+  --muted: #151038;
+  --muted-foreground: #7a6faa;
+  --accent: #1f1848;
+  --accent-foreground: #e8e4f0;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #27272a;
-  --input: #27272a;
-  --ring: #6366f1;
+  --border: #1f1848;
+  --input: #1f1848;
+  --ring: #c9a03c;
   --radius: 0.625rem;
-  --sidebar-background: #0a0a0f;
-  --sidebar-foreground: #a1a1aa;
-  --sidebar-primary: #6366f1;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1c1c24;
-  --sidebar-accent-foreground: #e4e4e7;
-  --sidebar-border: #27272a;
+  --sidebar-background: #08061a;
+  --sidebar-foreground: #9d93c8;
+  --sidebar-primary: #c9a03c;
+  --sidebar-primary-foreground: #0b0820;
+  --sidebar-accent: #120e30;
+  --sidebar-accent-foreground: #e8e4f0;
+  --sidebar-border: #1a1440;
 }
 
 @theme inline {
@@ -77,15 +77,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ─── Scrollbar customizado ─── */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
 
-/* ─── Gradientes utilitários ─── */
+/* Gradientes */
 .gradient-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  background: linear-gradient(135deg, #c9a03c 0%, #e8c547 50%, #d4a843 100%);
 }
 .gradient-success {
   background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
@@ -94,10 +94,13 @@ body {
   background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
 }
 .gradient-info {
-  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+.gradient-sidebar {
+  background: linear-gradient(180deg, #0b0820 0%, #08061a 50%, #060418 100%);
 }
 
-/* ─── Animação de shimmer ─── */
+/* Shimmer animation */
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -107,4 +110,5 @@ body {
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
+
 

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Church, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -39,14 +39,14 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted/30 px-4">
-      <Card className="w-full max-w-sm">
+    <div className="flex min-h-screen items-center justify-center bg-[#0b0820] px-4">
+      <Card className="w-full max-w-sm border-[#1f1848] bg-[#110d2c]">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-3 flex size-12 items-center justify-center rounded-xl bg-primary/10">
-            <Church className="size-6 text-primary" />
+          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-[#c9a03c]/10 p-2">
+            <img src="/logo.png" alt="Vida Por Vidas" className="size-12 object-contain" />
           </div>
-          <CardTitle className="text-xl">EcclesiaOS</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-xl text-[#c9a03c]">Vida Por Vidas</CardTitle>
+          <CardDescription className="text-[#7a6faa]">
             Entre com suas credenciais para acessar o sistema
           </CardDescription>
         </CardHeader>

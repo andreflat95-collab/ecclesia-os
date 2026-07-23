@@ -15,6 +15,7 @@ import {
   Camera,
   MessageCircle,
   MapPin,
+  Home,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -25,6 +26,7 @@ const navItems = [
   { title: "Membros", href: "/members", icon: Users },
   { title: "Ministérios", href: "/ministries", icon: Church },
   { title: "Visitantes", href: "/visitors", icon: UserPlus },
+  { title: "Pequenos Grupos", href: "/cells", icon: Home },
   { title: "Programações", href: "/events", icon: Calendar },
   { title: "Comunicações", href: "/communications", icon: MessageSquare },
   { title: "WhatsApp", href: "/whatsapp", icon: MessageCircle },
@@ -40,19 +42,19 @@ export function AppSidebar() {
   return (
     <aside
       className={cn(
-        "hidden lg:flex flex-col border-r border-border bg-card transition-all duration-300",
+        "hidden lg:flex flex-col border-r border-sidebar-border bg-gradient-to-b from-[#08061a] to-[#060418] transition-all duration-300",
         collapsed ? "w-[68px]" : "w-[240px]"
       )}
     >
       {/* Logo */}
-      <div className="flex h-14 items-center gap-3 border-b border-border px-3">
-        <div className="flex size-8 shrink-0 items-center justify-center rounded-lg gradient-primary">
-          <Church className="size-4 text-white" />
+      <div className="flex h-16 items-center gap-3 border-b border-sidebar-border px-3">
+        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#c9a03c]/10 overflow-hidden">
+          <img src="/logo.png" alt="Vida Por Vidas" className="size-7 object-contain" />
         </div>
         {!collapsed && (
           <div className="flex flex-col leading-none min-w-0">
-            <span className="text-sm font-semibold truncate">EcclesiaOS</span>
-            <span className="text-[10px] text-muted-foreground">Gestão Eclesiástica</span>
+            <span className="text-sm font-bold text-[#c9a03c] tracking-wide">VIDA POR VIDAS</span>
+            <span className="text-[10px] text-sidebar-foreground">Church CRM</span>
           </div>
         )}
       </div>
@@ -70,8 +72,8 @@ export function AppSidebar() {
                   className={cn(
                     "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150",
                     isActive
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                      ? "bg-[#c9a03c]/15 text-[#c9a03c] border-l-2 border-[#c9a03c]"
+                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                   )}
                   title={collapsed ? item.title : undefined}
                 >

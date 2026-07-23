@@ -22,9 +22,9 @@ interface DashboardStats {
 
 const KPI_CARDS = [
   { key: "members" as const, label: "Total Membros", icon: Users, gradient: "gradient-primary", suffix: "membros cadastrados" },
-  { key: "ministries" as const, label: "Ministérios", icon: Church, gradient: "gradient-info", suffix: "ministérios ativos" },
-  { key: "visitors" as const, label: "Visitantes", icon: UserPlus, gradient: "gradient-warning", suffix: "em acompanhamento" },
-  { key: "cells" as const, label: "Células", icon: TrendingUp, gradient: "gradient-success", suffix: "grupos ativos" },
+  { key: "ministries" as const, label: "Ministérios", icon: Church, gradient: "bg-gradient-to-br from-[#c9a03c] to-[#e8c547]", suffix: "ministérios ativos" },
+  { key: "visitors" as const, label: "Visitantes", icon: UserPlus, gradient: "bg-gradient-to-br from-[#a07820] to-[#c9a03c]", suffix: "em acompanhamento" },
+  { key: "cells" as const, label: "Células", icon: TrendingUp, gradient: "bg-gradient-to-br from-[#8b6914] to-[#c9a03c]", suffix: "grupos ativos" },
 ];
 
 export default function DashboardPage() {

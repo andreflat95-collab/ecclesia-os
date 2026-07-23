@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EcclesiaOS — Gestão Eclesiástica",
-  description: "Sistema completo de gestão para igrejas",
+  title: "Vida Por Vidas — CRM",
+  description: "Sistema de gestão eclesiástica Vida Por Vidas Church",
   manifest: "/manifest.json",
 };
 
