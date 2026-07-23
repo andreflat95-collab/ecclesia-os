@@ -14,6 +14,7 @@ import {
   QrCode,
   Camera,
   MessageCircle,
+  MapPin,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -27,6 +28,7 @@ const navItems = [
   { title: "Programações", href: "/events", icon: Calendar },
   { title: "Comunicações", href: "/communications", icon: MessageSquare },
   { title: "WhatsApp", href: "/whatsapp", icon: MessageCircle },
+  { title: "Lazer", href: "/venues", icon: MapPin },
   { title: "Galeria", href: "/gallery", icon: Camera },
   { title: "Permissões", href: "/roles", icon: Shield },
 ];

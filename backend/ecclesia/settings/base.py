@@ -43,6 +43,7 @@ LOCAL_APPS = [
     "ecclesia.apps.roles",
     "ecclesia.apps.communications",
     "ecclesia.apps.events",
+    "ecclesia.apps.venues",
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

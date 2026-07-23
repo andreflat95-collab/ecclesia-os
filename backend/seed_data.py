@@ -7,6 +7,7 @@ from ecclesia.apps.ministries.models import Ministry
 from ecclesia.apps.visitors.models import Visitor
 from ecclesia.apps.cells.models import Cell
 from ecclesia.apps.events.models import Event
+from ecclesia.apps.venues.models import Venue
 from django.utils import timezone
 import datetime
 
@@ -77,4 +78,12 @@ Event.objects.create(
     is_featured=True,
 )
 
-print(f'Seed OK: {Member.objects.count()} membros, {Ministry.objects.count()} ministerios, {Visitor.objects.count()} visitantes, {Cell.objects.count()} celulas, {Event.objects.count()} eventos')
+# ── Áreas de lazer ──
+Venue.objects.create(name='Quadra Poliesportiva', venue_type='sports_court', capacity=30, location='Ao lado do templo', description='Quadra coberta para futebol, vôlei e basquete')
+Venue.objects.create(name='Quadra de Vôlei', venue_type='volleyball', capacity=20, location='Área externa', description='Quadra de areia para vôlei')
+Venue.objects.create(name='Quadra de Basquete', venue_type='basketball', capacity=15, location='Área externa', description='Tabela oficial de basquete')
+Venue.objects.create(name='Campo de Futebol', venue_type='soccer_field', capacity=40, location='Terreno ao fundo', description='Campo gramado para futebol society')
+Venue.objects.create(name='Churrasqueira', venue_type='bbq_area', capacity=50, location='Área de convivência', description='Churrasqueira coberta com mesas e bancos', requires_approval=True, max_hours_per_booking=6)
+Venue.objects.create(name='Salão de Festas', venue_type='hall', capacity=80, location='Prédio anexo', description='Salão climatizado para eventos e confraternizações', requires_approval=True)
+
+print(f'Seed OK: {Member.objects.count()} membros, {Ministry.objects.count()} ministerios, {Visitor.objects.count()} visitantes, {Cell.objects.count()} celulas, {Event.objects.count()} eventos, {Venue.objects.count()} espacos')
