@@ -10,6 +10,9 @@ import {
   UserPlus,
   Shield,
   MessageSquare,
+  Calendar,
+  QrCode,
+  Camera,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -20,7 +23,10 @@ const navItems = [
   { title: "Membros", href: "/members", icon: Users },
   { title: "Ministérios", href: "/ministries", icon: Church },
   { title: "Visitantes", href: "/visitors", icon: UserPlus },
+  { title: "Programações", href: "/events", icon: Calendar },
   { title: "Comunicações", href: "/communications", icon: MessageSquare },
+  { title: "QR Code", href: "/qrcode", icon: QrCode },
+  { title: "Galeria", href: "/gallery", icon: Camera },
   { title: "Permissões", href: "/roles", icon: Shield },
 ];
 

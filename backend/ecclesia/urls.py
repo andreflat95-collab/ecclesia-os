@@ -22,6 +22,7 @@ urlpatterns = [
     path("api/", include("ecclesia.apps.visitors.urls")),
     path("api/", include("ecclesia.apps.roles.urls")),
     path("api/", include("ecclesia.apps.communications.urls")),
+    path("api/", include("ecclesia.apps.events.urls")),
 ]
 
 if settings.DEBUG:
