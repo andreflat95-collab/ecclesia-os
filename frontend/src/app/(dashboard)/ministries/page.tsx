@@ -149,7 +149,7 @@ export default function MinistriesPage() {
               <Card
                 key={m.id}
                 className="cursor-pointer hover:shadow-md transition-shadow"
-                onClick={() => { setEditId(m.id); setFormOpen(true); }}
+                onClick={() => router.push(`/ministries/${m.id}`)}
               >
                 <CardHeader>
                   <div className="flex items-center gap-3">
