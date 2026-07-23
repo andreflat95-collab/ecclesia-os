@@ -39,14 +39,14 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#0b0820] px-4">
-      <Card className="w-full max-w-sm border-[#1f1848] bg-[#110d2c]">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 px-4">
+      <Card className="w-full max-w-sm shadow-lg">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-[#c9a03c]/10 p-2">
+          <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-2xl bg-blue-50 p-2">
             <img src="/logo.png" alt="Vida Por Vidas" className="size-12 object-contain" />
           </div>
-          <CardTitle className="text-xl text-[#c9a03c]">Vida Por Vidas</CardTitle>
-          <CardDescription className="text-[#7a6faa]">
+          <CardTitle className="text-xl text-blue-600">Vida Por Vidas</CardTitle>
+          <CardDescription>
             Entre com suas credenciais para acessar o sistema
           </CardDescription>
         </CardHeader>

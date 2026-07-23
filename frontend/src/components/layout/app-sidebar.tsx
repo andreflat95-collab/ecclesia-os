@@ -42,18 +42,18 @@ export function AppSidebar() {
   return (
     <aside
       className={cn(
-        "hidden lg:flex flex-col border-r border-sidebar-border bg-gradient-to-b from-[#08061a] to-[#060418] transition-all duration-300",
+        "hidden lg:flex flex-col border-r border-sidebar-border bg-sidebar transition-all duration-300",
         collapsed ? "w-[68px]" : "w-[240px]"
       )}
     >
       {/* Logo */}
       <div className="flex h-16 items-center gap-3 border-b border-sidebar-border px-3">
-        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#c9a03c]/10 overflow-hidden">
+        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/10 overflow-hidden">
           <img src="/logo.png" alt="Vida Por Vidas" className="size-7 object-contain" />
         </div>
         {!collapsed && (
           <div className="flex flex-col leading-none min-w-0">
-            <span className="text-sm font-bold text-[#c9a03c] tracking-wide">VIDA POR VIDAS</span>
+            <span className="text-sm font-semibold text-white tracking-wide">VIDA POR VIDAS</span>
             <span className="text-[10px] text-sidebar-foreground">Church CRM</span>
           </div>
         )}
@@ -72,7 +72,7 @@ export function AppSidebar() {
                   className={cn(
                     "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150",
                     isActive
-                      ? "bg-[#c9a03c]/15 text-[#c9a03c] border-l-2 border-[#c9a03c]"
+                      ? "bg-sidebar-primary/15 text-sidebar-primary border-l-2 border-sidebar-primary"
                       : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                   )}
                   title={collapsed ? item.title : undefined}

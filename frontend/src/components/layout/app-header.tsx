@@ -28,7 +28,7 @@ export function AppHeader() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <header className="flex h-14 shrink-0 items-center gap-3 border-b border-border bg-card/50 px-6 backdrop-blur-sm">
+    <header className="flex h-14 shrink-0 items-center gap-3 border-b border-border bg-card px-6">
       <h2 className="text-sm font-semibold text-foreground">{title}</h2>
 
       <div className="ml-auto flex items-center gap-3">
