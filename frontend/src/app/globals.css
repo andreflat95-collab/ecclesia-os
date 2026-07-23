@@ -21,13 +21,13 @@
   --input: #e2e8f0;
   --ring: #3b82f6;
   --radius: 0.75rem;
-  --sidebar-background: #1e293b;
-  --sidebar-foreground: #cbd5e1;
+  --sidebar-background: #0f2744;
+  --sidebar-foreground: #8ba4c0;
   --sidebar-primary: #3b82f6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #f1f5f9;
-  --sidebar-border: #334155;
+  --sidebar-accent: #163358;
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: #1a3a5c;
 }
 
 @theme inline {

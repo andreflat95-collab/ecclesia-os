@@ -47,14 +47,14 @@ export function AppSidebar() {
       )}
     >
       {/* Logo */}
-      <div className="flex h-16 items-center gap-3 border-b border-sidebar-border px-3">
-        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/10 overflow-hidden">
-          <img src="/logo.png" alt="Vida Por Vidas" className="size-7 object-contain" />
+      <div className="flex h-16 items-center gap-3 border-b border-sidebar-border px-4">
+        <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white/10 overflow-hidden">
+          <img src="/logo.png" alt="Vida Por Vidas" className="size-6 object-contain" />
         </div>
         {!collapsed && (
           <div className="flex flex-col leading-none min-w-0">
-            <span className="text-sm font-semibold text-white tracking-wide">VIDA POR VIDAS</span>
-            <span className="text-[10px] text-sidebar-foreground">Church CRM</span>
+            <span className="text-sm font-semibold text-white">VIDA POR VIDAS</span>
+            <span className="text-[10px] text-sidebar-foreground font-medium">Church CRM</span>
           </div>
         )}
       </div>
@@ -70,9 +70,9 @@ export function AppSidebar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150",
+                    "flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-medium transition-all duration-150",
                     isActive
-                      ? "bg-sidebar-primary/15 text-sidebar-primary border-l-2 border-sidebar-primary"
+                      ? "bg-sidebar-accent text-white"
                       : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                   )}
                   title={collapsed ? item.title : undefined}
